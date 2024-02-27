@@ -19,7 +19,9 @@ let wrong = userChoice === even || userChoice === odd
 console.log(wrong);
   while (wrong === false) {
     userChoice = prompt('Riscrivi pari o dispari')
-    
+    if (userChoice === even || userChoice === odd) {
+        break
+    }
  }
 
 console.log(userChoice);
@@ -77,11 +79,13 @@ const sumPc = pcNumber + randomNumber
  * @returns 
  */
 function sumIsEven(sumUser) {
-    if (userChoice === true && sumUser % 2 === 0) {
+    let even = true
+    let odd = false
+
+    if (even === true && sumUser % 2 === 0) {
         return alert(`Complimenti hai vinto il tuo numero è pari ${sumUser}`)
-    } else if (userChoice === false && sumUser % 2 === 1) {
+    } else if (odd === false && sumUser % 2 === 1) {
         return alert(`Complimenti hai vinto il tuo numero è dispari ${sumUser}`)
-    } else { return alert(`Mi dispiace hai perso il tuo numero non è cio che hai scelto`) }
+    } 
 }
 
-sumIsEven(sumUser)
