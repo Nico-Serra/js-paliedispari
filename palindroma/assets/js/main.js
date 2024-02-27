@@ -1,4 +1,4 @@
-console.log('Funziona');
+//console.log('Funziona');
 
 /*
 
@@ -10,6 +10,7 @@ console.log('Funziona');
 
 const userWord = prompt('Inserisci qui la tua parola per vedere se è Palindroma')
 
+/*
 console.log(userWord);
 
 let splitUserWord = userWord.split('');
@@ -19,13 +20,27 @@ let reverseUserWord = splitUserWord.reverse().join('')
 
 console.log(reverseUserWord);
 
+*/
+
+
+/**
+ * 
+ * @param {*} userWord 
+ * @returns 
+ */
 function checkWordPalindroma(userWord) {
     let reverseUserWord = userWord.split('').reverse().join('')
-    return reverseUserWord
+    if (reverseUserWord === userWord) {
+        return alert('wow la tua parola è palindroma')
+    }  else {return alert('mi dispiace ma la tua parola non è palindroma')}
 }
+//console.log(checkWordPalindroma(userWord));
 
-console.log(checkWordPalindroma(userWord));
-
+/*
 if (checkWordPalindroma(userWord) === userWord) {
     alert('wow la tua parola è palindroma')
-} else {alert('mi dispiace ma la tua parola non lo è')}
+} else {alert('mi dispiace ma la tua parola non è palindroma')}
+
+*/
+
+checkWordPalindroma(userWord)
