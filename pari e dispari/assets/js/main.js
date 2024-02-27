@@ -61,11 +61,11 @@ const pcNumber = makeRandomNumber(1, 5)
 
 const sumUser = userNumber + randomNumber
 
-//console.log(sumUser);
+console.log(sumUser);
 
 const sumPc = pcNumber + randomNumber
 
-//console.log(sumPc);
+console.log(sumPc);
 
 //  if (userChoice === true && sumUser % 2 === 0) {
 //      alert(`Complimenti hai vinto il tuo numero è pari ${sumUser}`)
@@ -79,13 +79,19 @@ const sumPc = pcNumber + randomNumber
  * @returns 
  */
 function sumIsEven(sumUser) {
-    let even = true
-    let odd = false
+    let evenchoise = true
+    let oddchoise = false
 
-    if (even === true && sumUser % 2 === 0) {
-        return alert(`Complimenti hai vinto il tuo numero è pari ${sumUser}`)
-    } else if (odd === false && sumUser % 2 === 1) {
-        return alert(`Complimenti hai vinto il tuo numero è dispari ${sumUser}`)
+    if (evenchoise === true && sumUser % 2 === 0) {
+        return 'pari'
+    } else if (oddchoise === false && sumUser % 2 === 1) {
+        return 'dispari'
     } 
 }
+
+console.log(sumIsEven(sumUser));
+
+if (sumIsEven(sumUser)===userChoice) {
+    alert('Complimenti hai vinto')
+} else {alert('mi dispiace hai perso')}
 
