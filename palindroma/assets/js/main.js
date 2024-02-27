@@ -24,9 +24,9 @@ console.log(reverseUserWord);
 
 
 /**
- * 
- * @param {*} userWord 
- * @returns 
+ * Controlla se la tua parola è palindroma
+ * @param {string} userWord 
+ * @returns {string}
  */
 function checkWordPalindroma(userWord) {
     let reverseUserWord = userWord.split('').reverse().join('')
